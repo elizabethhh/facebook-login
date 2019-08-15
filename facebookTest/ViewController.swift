@@ -7,12 +7,24 @@
 //
 
 import UIKit
+import FacebookCore
+import FacebookLogin
+import FBSDKCoreKit
+import FBSDKLoginKit
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        let loginButton = FBLoginButton(permissions: [.publicProfile])
+        loginButton.center = view.center
+        self.view.addSubview(loginButton)
+        
+        
+    
+        
     }
 
 
